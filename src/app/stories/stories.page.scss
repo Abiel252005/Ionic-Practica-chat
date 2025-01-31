@@ -1,0 +1,42 @@
+.story-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.story-content img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+ion-back-button {
+    color: white;
+}
+
+ion-header {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+ion-toolbar {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+ion-button {
+    color: white;
+}
+
+.story-view ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

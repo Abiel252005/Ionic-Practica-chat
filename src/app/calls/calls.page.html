@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Llamadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let call of callHistory">
+      <ion-avatar slot="start">
+        <img [src]="call.avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ call.name }}</h2>
+        <p>{{ call.status }}</p>
+      </ion-label>
+      <ion-button>Llamar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lista de historias -->
+  <ion-list>
+    <ion-item *ngFor="let story of stories" (click)="viewStory(story)">
+      <ion-avatar slot="start">
+        <img [src]="story.profilePicture" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ story.name }}</h2>
+        <p>{{ story.time }}</p>
+      </ion-label>
+      <ion-button slot="end" fill="clear">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Vista de historia -->
+  <div *ngIf="selectedStory" class="story-view" (click)="closeStory()">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button (click)="closeStory()"></ion-back-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="story-content">
+      <img [src]="selectedStory.image" alt="Story Image" (click)="$event.stopPropagation()" />
+    </ion-content>
+  </div>
+</ion-content>
